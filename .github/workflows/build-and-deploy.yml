@@ -1,13 +1,10 @@
-name: Build & Deploy
+name: Build
 
 on:
   push:
     branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
@@ -21,21 +18,3 @@ jobs:
       - run: npm ci
       - run: npm run build:index
       - run: npm run build:cli
-      - name: Prepare website
-        run: |
-          cp registry/index.json website/index.json 2>/dev/null || true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: website
-        if: hashFiles('website/index.html') != ''
-
-  deploy:
-    needs: build
-    if: hashFiles('website/index.html') != ''
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
