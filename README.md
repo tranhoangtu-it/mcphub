@@ -46,16 +46,18 @@ npx mcphub bundle show devops
 
 ## How It Works
 
-```
-npx mcphub install <server>
-       │
-       ├─ Loads curated config from registry
-       │
-       ├─ mcpman installed?
-       │   ├─ YES → delegates to mcpman (lockfile, rollback, etc.)
-       │   └─ NO  → writes config directly to AI client files
-       │
-       └─ Done! Restart your AI client.
+> [View interactive architecture diagram on Excalidraw](https://excalidraw.com/#json=yPIOD2dxsstmfz2cvqpXk,zP-lcGRPTD5Hba3CtK1Jkw)
+
+```mermaid
+flowchart TD
+    A["npx mcphub install filesystem"] --> B["Load from registry index.json"]
+    B --> C["Resolve server config"]
+    C --> D{"mcpman installed?"}
+    D -->|YES| E["Delegate to mcpman\n(lockfile, rollback)"]
+    D -->|NO| F["Detect AI clients"]
+    F --> G["Write config to each\nclient's JSON file"]
+    E --> H["Done! Restart AI client"]
+    G --> H
 ```
 
 mcphub reads server configs from its curated registry and writes them to the correct config file for each detected AI client:
@@ -71,6 +73,28 @@ mcphub reads server configs from its curated registry and writes them to the cor
 ## With mcpman
 
 [mcpman](https://github.com/user/mcpman) is a full-featured MCP package manager. mcphub integrates with it seamlessly:
+
+```mermaid
+flowchart LR
+    subgraph mcphub["mcphub (WHAT)"]
+        R[Curated Registry]
+        B[Bundles]
+        D[Auto-Discovery]
+        S[Quality Scoring]
+    end
+    subgraph mcpman["mcpman (HOW)"]
+        I[Smart Installer]
+        L[Lockfile]
+        RB[Rollback]
+        V[Vault]
+    end
+    DEV["Developer"] --> mcphub
+    DEV --> mcpman
+    mcphub -->|delegates| mcpman
+    mcpman -->|resolves from| mcphub
+    mcpman --> AI["AI Clients"]
+    mcphub -->|fallback| AI
+```
 
 **mcphub = what to install** (curated catalog, bundles, scoring)
 **mcpman = how to install** (lockfile, rollback, version management, 10+ clients)
