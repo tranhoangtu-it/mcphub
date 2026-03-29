@@ -1,0 +1,14 @@
+name: context7
+package: "@upstash/context7-mcp"
+source: npm
+description: "Up-to-date documentation and code examples for any library via Context7"
+category: developer-tools
+tags: [docs, documentation, context, libraries, reference]
+author: upstash
+verified: true
+config:
+  command: npx
+  args: ["-y", "@upstash/context7-mcp"]
+  env: {}
+links:
+  homepage: "https://context7.com"

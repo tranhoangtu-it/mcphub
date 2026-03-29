@@ -1,0 +1,12 @@
+name: openapi
+package: "@ivotoby/openapi-mcp-server"
+source: npm
+description: "Generate MCP tools from any OpenAPI/Swagger spec automatically"
+category: developer-tools
+tags: [openapi, swagger, api, rest, code-generation]
+author: ivotoby
+verified: false
+config:
+  command: npx
+  args: ["-y", "@ivotoby/openapi-mcp-server"]
+  env: {}

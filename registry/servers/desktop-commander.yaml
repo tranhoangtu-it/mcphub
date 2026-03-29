@@ -1,0 +1,12 @@
+name: desktop-commander
+package: "@wonderwhy-er/desktop-commander"
+source: npm
+description: "Desktop automation — file management, terminal, and process control"
+category: developer-tools
+tags: [desktop, automation, terminal, files, processes]
+author: wonderwhy-er
+verified: false
+config:
+  command: npx
+  args: ["-y", "@wonderwhy-er/desktop-commander"]
+  env: {}

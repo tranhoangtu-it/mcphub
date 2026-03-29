@@ -1,0 +1,14 @@
+name: docker
+package: "docker-mcp"
+source: npm
+description: "Manage Docker containers, images, and networks via MCP"
+category: devops
+tags: [docker, containers, devops, infrastructure]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "docker-mcp"]
+  env: {}
+links:
+  repo: "https://github.com/docker/docker-mcp"

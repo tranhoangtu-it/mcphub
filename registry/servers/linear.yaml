@@ -1,0 +1,13 @@
+name: linear
+package: "linear-mcp"
+source: npm
+description: "Linear project management — issues, projects, and teams"
+category: productivity
+tags: [linear, project-management, issues, agile]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "linear-mcp"]
+  env:
+    LINEAR_API_KEY: ""

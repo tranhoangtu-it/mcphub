@@ -1,0 +1,10 @@
+name: devops
+description: "Infrastructure and deployment MCP servers"
+category: operations
+servers:
+  - docker
+  - kubectl
+  - aws
+  - github
+  - git
+  - sentry

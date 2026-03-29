@@ -1,0 +1,14 @@
+name: azure
+package: "@azure/mcp"
+source: npm
+description: "Azure cloud services management via MCP"
+category: cloud
+tags: [azure, cloud, microsoft, infrastructure]
+author: microsoft
+verified: true
+config:
+  command: npx
+  args: ["-y", "@azure/mcp"]
+  env: {}
+links:
+  homepage: "https://azure.microsoft.com"

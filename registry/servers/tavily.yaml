@@ -1,0 +1,15 @@
+name: tavily
+package: "tavily-mcp"
+source: npm
+description: "AI-optimized web search and content extraction via Tavily API"
+category: web
+tags: [search, ai-search, tavily, web, extraction]
+author: tavily
+verified: true
+config:
+  command: npx
+  args: ["-y", "tavily-mcp"]
+  env:
+    TAVILY_API_KEY: ""
+links:
+  homepage: "https://tavily.com"

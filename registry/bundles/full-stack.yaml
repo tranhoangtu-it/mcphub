@@ -1,0 +1,13 @@
+name: full-stack
+description: "Complete MCP setup for full-stack developers"
+category: development
+servers:
+  - filesystem
+  - git
+  - github
+  - fetch
+  - puppeteer
+  - postgres
+  - docker
+  - sequential-thinking
+  - memory

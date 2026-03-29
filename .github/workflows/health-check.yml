@@ -1,0 +1,25 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Weekly Monday 8am UTC
+  workflow_dispatch: {}
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx tsx scripts/health-check.ts || true
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update health check results"
+          file_pattern: "registry/health.json"

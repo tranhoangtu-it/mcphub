@@ -1,0 +1,12 @@
+name: chrome-devtools
+package: "chrome-devtools-mcp"
+source: npm
+description: "Chrome DevTools automation — inspect, debug, and profile web pages"
+category: web
+tags: [chrome, devtools, browser, debugging, performance]
+author: community
+verified: true
+config:
+  command: npx
+  args: ["-y", "chrome-devtools-mcp"]
+  env: {}

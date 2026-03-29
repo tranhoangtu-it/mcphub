@@ -1,0 +1,15 @@
+name: postgres
+package: "@modelcontextprotocol/server-postgres"
+source: npm
+description: "Query and manage PostgreSQL databases via MCP"
+category: database
+tags: [postgres, sql, database, query]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-postgres"]
+  env:
+    POSTGRES_CONNECTION_STRING: ""
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

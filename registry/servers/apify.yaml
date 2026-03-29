@@ -1,0 +1,15 @@
+name: apify
+package: "@apify/actors-mcp-server"
+source: npm
+description: "Apify web scraping actors and crawlers via MCP"
+category: web
+tags: [apify, scraping, crawling, automation, actors]
+author: apify
+verified: true
+config:
+  command: npx
+  args: ["-y", "@apify/actors-mcp-server"]
+  env:
+    APIFY_TOKEN: ""
+links:
+  homepage: "https://apify.com"

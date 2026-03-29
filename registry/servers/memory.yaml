@@ -1,0 +1,14 @@
+name: memory
+package: "@modelcontextprotocol/server-memory"
+source: npm
+description: "Knowledge graph-based persistent memory for AI agents"
+category: ai
+tags: [memory, knowledge-graph, persistence, storage]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-memory"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

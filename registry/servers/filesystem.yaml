@@ -1,0 +1,14 @@
+name: filesystem
+package: "@modelcontextprotocol/server-filesystem"
+source: npm
+description: "Secure read/write access to local filesystem with configurable root directory"
+category: developer-tools
+tags: [files, io, local, filesystem]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-filesystem", "."]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

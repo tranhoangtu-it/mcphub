@@ -1,0 +1,14 @@
+name: dynatrace
+package: "@dynatrace-oss/dynatrace-mcp-server"
+source: npm
+description: "Dynatrace observability — metrics, traces, and AI-powered insights"
+category: analytics
+tags: [dynatrace, monitoring, observability, apm, traces]
+author: dynatrace
+verified: true
+config:
+  command: npx
+  args: ["-y", "@dynatrace-oss/dynatrace-mcp-server"]
+  env:
+    DT_API_TOKEN: ""
+    DT_ENVIRONMENT_URL: ""

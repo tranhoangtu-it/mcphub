@@ -1,0 +1,14 @@
+name: storybook
+package: "@storybook/mcp"
+source: npm
+description: "Interact with Storybook components, stories, and design system via MCP"
+category: developer-tools
+tags: [storybook, components, ui, design-system, testing]
+author: storybook
+verified: true
+config:
+  command: npx
+  args: ["-y", "@storybook/mcp"]
+  env: {}
+links:
+  homepage: "https://storybook.js.org"

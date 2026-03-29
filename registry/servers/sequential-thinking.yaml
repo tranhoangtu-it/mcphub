@@ -1,0 +1,14 @@
+name: sequential-thinking
+package: "@modelcontextprotocol/server-sequential-thinking"
+source: npm
+description: "Dynamic problem-solving through structured thought sequences"
+category: ai
+tags: [reasoning, thinking, problem-solving, chain-of-thought]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

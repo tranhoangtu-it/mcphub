@@ -1,0 +1,12 @@
+name: kubectl
+package: "kubectl-mcp-server"
+source: npm
+description: "Kubernetes cluster management via kubectl MCP integration"
+category: devops
+tags: [kubernetes, k8s, kubectl, cluster]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "kubectl-mcp-server"]
+  env: {}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mcphub — MCP Server Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>mcphub</h1>
+      <p class="tagline">Curated MCP servers for AI agents. Browse, search, install.</p>
+      <div class="stats" id="stats"></div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search servers..." autocomplete="off">
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="bundles-section" class="section">
+      <h2>Bundles</h2>
+      <div class="bundle-grid" id="bundles"></div>
+    </section>
+
+    <section id="servers-section" class="section">
+      <h2>Servers</h2>
+      <div class="server-grid" id="servers"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="https://github.com/user/mcphub">GitHub</a> &middot;
+        <a href="https://github.com/user/mcphub/blob/main/CONTRIBUTING.md">Contribute</a> &middot;
+        Powered by <a href="https://npmjs.com/package/mcpman">mcpman</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

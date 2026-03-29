@@ -1,0 +1,14 @@
+name: datadog
+package: "@winor30/mcp-server-datadog"
+source: npm
+description: "Datadog monitoring — metrics, logs, traces, and dashboards via MCP"
+category: analytics
+tags: [datadog, monitoring, metrics, logs, observability]
+author: winor30
+verified: false
+config:
+  command: npx
+  args: ["-y", "@winor30/mcp-server-datadog"]
+  env:
+    DD_API_KEY: ""
+    DD_APP_KEY: ""

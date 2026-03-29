@@ -1,0 +1,16 @@
+name: supabase
+package: "@supabase/mcp-server-supabase"
+source: npm
+description: "Supabase database, auth, storage, and edge functions via MCP"
+category: database
+tags: [supabase, postgres, auth, storage, baas]
+author: supabase
+verified: true
+config:
+  command: npx
+  args: ["-y", "@supabase/mcp-server-supabase"]
+  env:
+    SUPABASE_URL: ""
+    SUPABASE_SERVICE_ROLE_KEY: ""
+links:
+  repo: "https://github.com/supabase/mcp-server-supabase"

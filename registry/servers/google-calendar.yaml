@@ -1,0 +1,14 @@
+name: google-calendar
+package: "@cocal/google-calendar-mcp"
+source: npm
+description: "Google Calendar — create, read, update events and manage schedules"
+category: productivity
+tags: [google, calendar, scheduling, events]
+author: cocal
+verified: false
+config:
+  command: npx
+  args: ["-y", "@cocal/google-calendar-mcp"]
+  env:
+    GOOGLE_CLIENT_ID: ""
+    GOOGLE_CLIENT_SECRET: ""

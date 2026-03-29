@@ -1,0 +1,13 @@
+name: circleci
+package: "@circleci/mcp-server-circleci"
+source: npm
+description: "CircleCI pipelines, jobs, and workflows management via MCP"
+category: devops
+tags: [circleci, ci-cd, pipelines, builds, testing]
+author: circleci
+verified: true
+config:
+  command: npx
+  args: ["-y", "@circleci/mcp-server-circleci"]
+  env:
+    CIRCLECI_TOKEN: ""

@@ -1,0 +1,13 @@
+name: hubspot
+package: "@hubspot/mcp-server"
+source: npm
+description: "HubSpot CRM — contacts, deals, companies, and marketing via MCP"
+category: productivity
+tags: [hubspot, crm, marketing, sales, contacts]
+author: hubspot
+verified: true
+config:
+  command: npx
+  args: ["-y", "@hubspot/mcp-server"]
+  env:
+    HUBSPOT_ACCESS_TOKEN: ""

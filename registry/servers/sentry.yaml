@@ -1,0 +1,14 @@
+name: sentry
+package: "@sentry/mcp-server"
+source: npm
+description: "Sentry error tracking — query issues, events, and releases"
+category: analytics
+tags: [sentry, errors, monitoring, debugging]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "@sentry/mcp-server"]
+  env:
+    SENTRY_AUTH_TOKEN: ""
+    SENTRY_ORG: ""

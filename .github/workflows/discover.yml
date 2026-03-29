@@ -1,0 +1,27 @@
+name: Auto-Discovery
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Weekly Monday 6am UTC
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx tsx scripts/discover-servers.ts
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          title: "chore: update discovered MCP servers"
+          body: "Automated weekly discovery of new MCP servers from npm registry."
+          branch: auto-discovery
+          commit-message: "chore: update discovered servers index"

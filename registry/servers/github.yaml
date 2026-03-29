@@ -1,0 +1,15 @@
+name: github
+package: "@modelcontextprotocol/server-github"
+source: npm
+description: "GitHub API integration for repos, issues, PRs, and code search"
+category: developer-tools
+tags: [github, api, issues, pull-requests]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-github"]
+  env:
+    GITHUB_PERSONAL_ACCESS_TOKEN: ""
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

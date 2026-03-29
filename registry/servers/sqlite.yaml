@@ -1,0 +1,14 @@
+name: sqlite
+package: "mcp-server-sqlite"
+source: npm
+description: "Read and query SQLite databases"
+category: database
+tags: [sqlite, sql, database, local]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "mcp-server-sqlite"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

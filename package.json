@@ -1,0 +1,30 @@
+{
+  "name": "mcphub",
+  "version": "0.1.0",
+  "description": "Centralized hub for curated MCP servers with CLI, bundles, and auto-discovery",
+  "private": true,
+  "type": "module",
+  "workspaces": ["cli"],
+  "scripts": {
+    "validate": "tsx scripts/validate-registry.ts",
+    "build:index": "tsx scripts/build-index.ts",
+    "build:cli": "cd cli && npm run build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "check-packages": "tsx scripts/check-packages.ts",
+    "discover": "tsx scripts/discover-servers.ts",
+    "health-check": "tsx scripts/health-check.ts"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.2",
+    "yaml": "^2.8.2"
+  }
+}

@@ -1,0 +1,13 @@
+name: figma
+package: "figma-mcp"
+source: npm
+description: "Read Figma designs, components, and styles via MCP"
+category: design
+tags: [figma, design, ui, components]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "figma-mcp"]
+  env:
+    FIGMA_ACCESS_TOKEN: ""

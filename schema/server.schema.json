@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Server Entry",
+  "type": "object",
+  "required": ["name", "package", "description", "category", "config"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique server identifier (kebab-case)"
+    },
+    "package": {
+      "type": "string",
+      "description": "Package name (npm scope/name, pypi name, docker image, or github url)"
+    },
+    "source": {
+      "type": "string",
+      "enum": ["npm", "pypi", "github", "docker"],
+      "default": "npm"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "developer-tools",
+        "database",
+        "web",
+        "ai",
+        "cloud",
+        "productivity",
+        "devops",
+        "communication",
+        "design",
+        "analytics",
+        "security",
+        "other"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 10
+    },
+    "author": { "type": "string" },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "config": {
+      "type": "object",
+      "required": ["command", "args"],
+      "additionalProperties": false,
+      "properties": {
+        "command": { "type": "string" },
+        "args": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "clients": {
+      "type": "object",
+      "description": "Per-client config overrides",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "command": { "type": "string" },
+          "args": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repo": { "type": "string", "format": "uri" },
+        "docs": { "type": "string", "format": "uri" },
+        "homepage": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

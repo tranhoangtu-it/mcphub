@@ -1,0 +1,14 @@
+name: gitlab
+package: "@zereight/mcp-gitlab"
+source: npm
+description: "GitLab API integration — projects, merge requests, issues, and pipelines"
+category: developer-tools
+tags: [gitlab, git, merge-requests, ci-cd, pipelines]
+author: zereight
+verified: false
+config:
+  command: npx
+  args: ["-y", "@zereight/mcp-gitlab"]
+  env:
+    GITLAB_TOKEN: ""
+    GITLAB_URL: ""

@@ -1,0 +1,15 @@
+name: stripe-official
+package: "@stripe/mcp"
+source: npm
+description: "Official Stripe MCP server — payments, subscriptions, invoices"
+category: other
+tags: [stripe, payments, billing, subscriptions, official]
+author: stripe
+verified: true
+config:
+  command: npx
+  args: ["-y", "@stripe/mcp"]
+  env:
+    STRIPE_SECRET_KEY: ""
+links:
+  homepage: "https://stripe.com"

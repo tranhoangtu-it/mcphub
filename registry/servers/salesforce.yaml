@@ -1,0 +1,14 @@
+name: salesforce
+package: "@salesforce/mcp"
+source: npm
+description: "Salesforce CRM data and API integration via MCP"
+category: productivity
+tags: [salesforce, crm, sales, api]
+author: salesforce
+verified: true
+config:
+  command: npx
+  args: ["-y", "@salesforce/mcp"]
+  env:
+    SALESFORCE_ACCESS_TOKEN: ""
+    SALESFORCE_INSTANCE_URL: ""

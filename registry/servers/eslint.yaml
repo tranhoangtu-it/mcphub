@@ -1,0 +1,14 @@
+name: eslint
+package: "@eslint/mcp"
+source: npm
+description: "ESLint code analysis and linting via MCP"
+category: developer-tools
+tags: [eslint, linting, code-quality, javascript, typescript]
+author: eslint
+verified: true
+config:
+  command: npx
+  args: ["-y", "@eslint/mcp"]
+  env: {}
+links:
+  homepage: "https://eslint.org"

@@ -1,0 +1,13 @@
+name: slack
+package: "slack-mcp"
+source: npm
+description: "Send and read Slack messages, manage channels via MCP"
+category: communication
+tags: [slack, messaging, chat, communication]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "slack-mcp"]
+  env:
+    SLACK_BOT_TOKEN: ""

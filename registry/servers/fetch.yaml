@@ -1,0 +1,14 @@
+name: fetch
+package: "mcp-server-fetch"
+source: pypi
+description: "Fetch and convert web content for LLM consumption"
+category: web
+tags: [http, fetch, web, scraping]
+author: anthropic
+verified: true
+config:
+  command: uvx
+  args: ["mcp-server-fetch"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

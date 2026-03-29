@@ -1,0 +1,13 @@
+name: stripe
+package: "stripe-mcp"
+source: npm
+description: "Stripe payments API — customers, charges, subscriptions"
+category: other
+tags: [stripe, payments, billing, api]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "stripe-mcp"]
+  env:
+    STRIPE_SECRET_KEY: ""

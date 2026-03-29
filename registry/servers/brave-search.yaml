@@ -1,0 +1,15 @@
+name: brave-search
+package: "@modelcontextprotocol/server-brave-search"
+source: npm
+description: "Web search via Brave Search API"
+category: web
+tags: [search, brave, web, api]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-brave-search"]
+  env:
+    BRAVE_API_KEY: ""
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

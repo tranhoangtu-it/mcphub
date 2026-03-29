@@ -1,0 +1,14 @@
+name: git
+package: "mcp-server-git"
+source: pypi
+description: "Read, search, and manipulate Git repositories via MCP"
+category: developer-tools
+tags: [git, version-control, repository]
+author: anthropic
+verified: true
+config:
+  command: uvx
+  args: ["mcp-server-git"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

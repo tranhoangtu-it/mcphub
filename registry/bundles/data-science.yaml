@@ -1,0 +1,10 @@
+name: data-science
+description: "MCP servers for data analysis, databases, and AI workflows"
+category: data
+servers:
+  - filesystem
+  - postgres
+  - sqlite
+  - fetch
+  - memory
+  - sequential-thinking

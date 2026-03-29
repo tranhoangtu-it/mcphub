@@ -1,0 +1,14 @@
+name: puppeteer
+package: "@modelcontextprotocol/server-puppeteer"
+source: npm
+description: "Browser automation and web scraping via Puppeteer"
+category: web
+tags: [browser, automation, scraping, puppeteer]
+author: anthropic
+verified: true
+config:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-puppeteer"]
+  env: {}
+links:
+  repo: "https://github.com/modelcontextprotocol/servers"

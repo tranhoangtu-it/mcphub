@@ -1,0 +1,11 @@
+name: web-developer
+description: "Essential MCP servers for web development workflows"
+category: development
+servers:
+  - filesystem
+  - git
+  - github
+  - fetch
+  - puppeteer
+  - postgres
+  - sequential-thinking

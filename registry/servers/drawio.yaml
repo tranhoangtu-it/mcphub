@@ -1,0 +1,14 @@
+name: drawio
+package: "@drawio/mcp"
+source: npm
+description: "Create and edit diagrams with draw.io via MCP"
+category: design
+tags: [drawio, diagrams, flowcharts, architecture, visual]
+author: drawio
+verified: true
+config:
+  command: npx
+  args: ["-y", "@drawio/mcp"]
+  env: {}
+links:
+  homepage: "https://draw.io"

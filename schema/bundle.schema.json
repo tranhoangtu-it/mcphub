@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Server Bundle",
+  "type": "object",
+  "required": ["name", "description", "servers"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique bundle identifier (kebab-case)"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "category": { "type": "string" },
+    "servers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "List of server names (must exist in registry/servers/)"
+    }
+  }
+}

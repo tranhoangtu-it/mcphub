@@ -1,0 +1,15 @@
+name: jira
+package: "jira-mcp"
+source: npm
+description: "Jira issue tracking — create, update, and query issues"
+category: productivity
+tags: [jira, project-management, issues, atlassian]
+author: community
+verified: false
+config:
+  command: npx
+  args: ["-y", "jira-mcp"]
+  env:
+    JIRA_URL: ""
+    JIRA_EMAIL: ""
+    JIRA_API_TOKEN: ""
