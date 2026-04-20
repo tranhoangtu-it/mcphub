@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T09:30:09.425Z",
+  "generated": "2026-04-20T09:52:48.021Z",
   "total": 40,
   "healthy": 40,
   "failed": 0,
@@ -8,241 +8,241 @@
       "name": "apify",
       "package": "@apify/actors-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "aws",
       "package": "aws-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "azure",
       "package": "@azure/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "brave-search",
       "package": "@modelcontextprotocol/server-brave-search",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "chrome-devtools",
       "package": "chrome-devtools-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "circleci",
       "package": "@circleci/mcp-server-circleci",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "clickup",
       "package": "@taazkareem/clickup-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "context7",
       "package": "@upstash/context7-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "datadog",
       "package": "@winor30/mcp-server-datadog",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "desktop-commander",
       "package": "@wonderwhy-er/desktop-commander",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "docker",
       "package": "docker-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "drawio",
       "package": "@drawio/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "dynatrace",
       "package": "@dynatrace-oss/dynatrace-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "eslint",
       "package": "@eslint/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "fetch",
       "package": "mcp-server-fetch",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "figma",
       "package": "figma-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "filesystem",
       "package": "@modelcontextprotocol/server-filesystem",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "git",
       "package": "mcp-server-git",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "github",
       "package": "@modelcontextprotocol/server-github",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "gitlab",
       "package": "@zereight/mcp-gitlab",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "google-calendar",
       "package": "@cocal/google-calendar-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "hubspot",
       "package": "@hubspot/mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "jira",
       "package": "jira-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "kubectl",
       "package": "kubectl-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "linear",
       "package": "linear-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "memory",
       "package": "@modelcontextprotocol/server-memory",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "notion",
       "package": "notion-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "openapi",
       "package": "@ivotoby/openapi-mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "postgres",
       "package": "@modelcontextprotocol/server-postgres",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "puppeteer",
       "package": "@modelcontextprotocol/server-puppeteer",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "salesforce",
       "package": "@salesforce/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "sentry",
       "package": "@sentry/mcp-server",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "sequential-thinking",
       "package": "@modelcontextprotocol/server-sequential-thinking",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "slack",
       "package": "slack-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "sqlite",
       "package": "mcp-server-sqlite",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "storybook",
       "package": "@storybook/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "stripe-official",
       "package": "@stripe/mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "stripe",
       "package": "stripe-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "supabase",
       "package": "@supabase/mcp-server-supabase",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     },
     {
       "name": "tavily",
       "package": "tavily-mcp",
       "status": "healthy",
-      "lastCheck": "2026-04-13T09:30:09.425Z"
+      "lastCheck": "2026-04-20T09:52:48.021Z"
     }
   ]
 }
