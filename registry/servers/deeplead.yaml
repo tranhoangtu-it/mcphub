@@ -1,0 +1,16 @@
+name: deeplead
+package: mcp-remote
+source: npm
+description: "Search and enrich B2B businesses, companies and people, and find emails and phones. Connects to Deeplead's hosted service through mcp-remote; Deeplead access and OAuth required."
+category: productivity
+tags: [sales, marketing, leads, enrichment, email, remote, oauth]
+author: Deeplead
+verified: false
+config:
+  command: npx
+  args: ["-y", "mcp-remote", "https://www.deeplead.io/api/mcp"]
+  env: {}
+links:
+  repo: "https://github.com/JWPapi/deeplead-mcp"
+  docs: "https://github.com/JWPapi/deeplead-mcp#connection"
+  homepage: "https://www.deeplead.io"
