@@ -1,0 +1,16 @@
+name: invokely-mcp-connector
+package: "https://github.com/estevecastells/invokely-mcp-connector"
+source: github
+description: "Node 22 local stdio adapter for Invokely's hosted official-statistics MCP; the hosted backend is not included."
+category: other
+tags: [statistics, official-statistics, stdio]
+author: Invokely
+verified: false
+config:
+  command: npx
+  args: ["-y", "github:estevecastells/invokely-mcp-connector"]
+  env: {}
+links:
+  repo: "https://github.com/estevecastells/invokely-mcp-connector"
+  docs: "https://invokely.ai/docs"
+  homepage: "https://invokely.ai/"
