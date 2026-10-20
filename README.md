@@ -1,15 +1,17 @@
 # mcphub
 
-Centralized hub for curated MCP (Model Context Protocol) servers. Browse, search, and install MCP servers across multiple AI clients from a single CLI.
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub stars](https://img.shields.io/github/stars/tranhoangtu-it/mcphub)](https://github.com/tranhoangtu-it/mcphub)
+
+One CLI to browse, search, and install curated MCP (Model Context Protocol) servers into every AI client you use.
 
 ## Why mcphub?
 
-Setting up MCP servers means finding the right packages, figuring out config formats for each AI client, and managing environment variables. mcphub solves this:
+Setting up MCP servers means finding the right packages, figuring out config formats for each AI client, and managing environment variables. mcphub keeps a curated registry of verified configs and writes them to the right place for each client, so a server goes from discovery to working in one command.
 
-- **40+ curated servers** — Verified configs ready to install in one command
+- **40 curated servers** — Verified configs ready to install in one command
 - **5 bundles** — Pre-built collections by use case (web-dev, data-science, devops, full-stack, productivity)
 - **5 AI clients** — Claude Desktop, VS Code, Cursor, Windsurf, Claude Code
-- **Auto-discovery** — Finds 400+ servers from npm automatically
+- **Auto-discovery** — Plus servers auto-discovered weekly by the `discover.yml` workflow
 - **Zero config** — Works instantly with `npx`, no global install needed
 
 ## Quick Start
@@ -48,31 +50,36 @@ npx mcphub bundle show devops
 
 > [View interactive architecture diagram on Excalidraw](https://excalidraw.com/#json=yPIOD2dxsstmfz2cvqpXk,zP-lcGRPTD5Hba3CtK1Jkw)
 
+Server and bundle definitions live as YAML files in the registry. `build-index.ts` compiles them into a single `registry/index.json`, which the CLI loads to resolve servers and bundles and install them into client configs:
+
 ```mermaid
 flowchart TD
-    A["npx mcphub install filesystem"] --> B["Load from registry index.json"]
-    B --> C["Resolve server config"]
-    C --> D{"mcpman installed?"}
+    Y["registry/servers/*.yaml\nregistry/bundles/*.yaml"] --> BI["build-index.ts"]
+    BI --> IDX["registry/index.json"]
+    IDX --> CLI["npx mcphub install &lt;server&gt;\nor bundle install &lt;bundle&gt;"]
+    CLI --> R["Resolve server config\n(bundle expands to its servers)"]
+    R --> D{"mcpman installed\nand no --client flag?"}
     D -->|YES| E["Delegate to mcpman\n(lockfile, rollback)"]
+    E -->|fails| F
     D -->|NO| F["Detect AI clients"]
     F --> G["Write config to each\nclient's JSON file"]
     E --> H["Done! Restart AI client"]
     G --> H
 ```
 
-mcphub reads server configs from its curated registry and writes them to the correct config file for each detected AI client:
+The index is built locally with `build-index.ts` (`npm run build:index`). mcphub writes the resolved config to the correct file for each detected AI client:
 
 | Client | Config Path | Root Key |
 |--------|------------|----------|
-| Claude Desktop | `%APPDATA%/Claude/claude_desktop_config.json` | `mcpServers` |
-| Cursor | `%APPDATA%/Cursor/User/globalStorage/cursor.mcp/mcp.json` | `mcpServers` |
+| Claude Desktop | `%APPDATA%/Claude/claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`) | `mcpServers` |
+| Cursor | `%APPDATA%/Cursor/User/globalStorage/cursor.mcp/mcp.json` (otherwise `~/.config/Cursor/User/globalStorage/cursor.mcp/mcp.json`) | `mcpServers` |
 | VS Code | `~/.vscode/mcp.json` | `servers` |
 | Windsurf | `~/.windsurf/mcp.json` | `mcpServers` |
 | Claude Code | `~/.claude/settings.json` | `mcpServers` |
 
 ## With mcpman
 
-[mcpman](https://github.com/user/mcpman) is a full-featured MCP package manager. mcphub integrates with it seamlessly:
+[mcpman](https://github.com/tranhoangtu-it/mcpman) is a full-featured MCP package manager. mcphub integrates with it seamlessly:
 
 ```mermaid
 flowchart LR
@@ -108,17 +115,7 @@ npm install -g mcpman
 npx mcphub install filesystem    # → automatically uses mcpman under the hood
 ```
 
-### Option 2: mcpman Registry
-
-Add mcphub as a registry source in mcpman:
-
-```bash
-mcpman registry add mcphub https://raw.githubusercontent.com/user/mcphub/main/registry/index.json
-mcpman install mcphub:filesystem
-mcpman install mcphub:postgres
-```
-
-### Option 3: mcpman Plugin
+### Option 2: mcpman Plugin
 
 For richer integration (search, bundles via mcpman):
 
@@ -159,7 +156,7 @@ mcphub/
 ├── registry/
 │   ├── servers/        # 40 curated server YAML configs
 │   ├── bundles/        # 5 curated bundles
-│   └── discovered/     # 400+ auto-discovered servers
+│   └── discovered/     # auto-discovered servers (generated weekly)
 ├── cli/                # Standalone CLI (npx mcphub)
 ├── website/            # GitHub Pages static site
 ├── schema/             # JSON Schema for validation
