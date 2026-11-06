@@ -1,0 +1,15 @@
+name: agent-qa
+package: "agent-qa"
+source: npm
+description: "Orchestrates agent-led QA workflows across web, Android, and iOS targets"
+category: developer-tools
+tags: [testing, qa, browser, android, ios, automation, agents]
+author: vostride
+verified: false
+config:
+  command: npx
+  args: ["-y", "agent-qa", "mcp"]
+  env: {}
+links:
+  repo: "https://github.com/vostride/agent-qa"
+  docs: "https://vostride.com/docs/agent-qa"
