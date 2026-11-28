@@ -4,15 +4,10 @@ import { findServer } from "../core/registry-loader.js";
 import { isMcpmanInstalled, delegateToMcpman } from "../core/mcpman-bridge.js";
 import { installDirect } from "../core/direct-installer.js";
 import { logger } from "../utils/logger.js";
+import { getValidClientTypes } from "../clients/client-detector.js";
 import type { ClientType } from "../clients/types.js";
 
-const VALID_CLIENTS: ClientType[] = [
-  "claude-desktop",
-  "cursor",
-  "vscode",
-  "windsurf",
-  "claude-code",
-];
+const VALID_CLIENTS: ClientType[] = getValidClientTypes();
 
 export const installCommand = defineCommand({
   meta: {
@@ -79,7 +74,9 @@ function runDirectInstall(
   const results = installDirect(serverName, server.config, targetClient);
 
   if (results.length === 0) {
-    logger.warn("No AI clients found. Install Claude Desktop, Cursor, VS Code, or Windsurf first.");
+    logger.warn(
+      "No AI clients found. Install Claude Desktop, Cursor, VS Code, Windsurf, Claude Code, Zed, or Gemini CLI first."
+    );
     return;
   }
 

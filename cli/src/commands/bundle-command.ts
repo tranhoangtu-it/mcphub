@@ -14,7 +14,10 @@ import {
 } from "../core/registry-loader.js";
 import { installDirect } from "../core/direct-installer.js";
 import { delegateToMcpman, isMcpmanInstalled } from "../core/mcpman-bridge.js";
+import { getValidClientTypes } from "../clients/client-detector.js";
 import type { ClientType } from "../clients/types.js";
+
+const VALID_CLIENTS = getValidClientTypes();
 
 const listCmd = defineCommand({
 	meta: { name: "list", description: "List all available bundles" },
@@ -92,7 +95,7 @@ const installCmd = defineCommand({
 		},
 		client: {
 			type: "string",
-			description: "Target client (claude-desktop, cursor, vscode, windsurf, claude-code)",
+			description: `Target client (${VALID_CLIENTS.join(", ")})`,
 		},
 		exclude: {
 			type: "string",
@@ -100,6 +103,14 @@ const installCmd = defineCommand({
 		},
 	},
 	async run({ args }) {
+		const targetClient = args.client as ClientType | undefined;
+		if (targetClient && !VALID_CLIENTS.includes(targetClient)) {
+			console.error(
+				`${pc.red("✗")} Unknown client "${targetClient}". Valid options: ${VALID_CLIENTS.join(", ")}`,
+			);
+			process.exit(1);
+		}
+
 		const bundle = findBundle(args.name);
 		if (!bundle) {
 			console.error(`${pc.red("✗")} Bundle "${args.name}" not found.`);
@@ -126,14 +137,14 @@ const installCmd = defineCommand({
 
 			process.stdout.write(`  Installing ${pc.cyan(name)}... `);
 			try {
-				// Try mcpman first, fallback to direct install
-				const useMcpman = isMcpmanInstalled();
+				// Try mcpman first unless a specific client is targeted
+				const useMcpman = !targetClient && isMcpmanInstalled();
 				let ok = false;
 				if (useMcpman) {
 					ok = delegateToMcpman(server.package);
 				}
 				if (!useMcpman || !ok) {
-					const installResults = installDirect(name, server.config, args.client as ClientType | undefined);
+					const installResults = installDirect(name, server.config, targetClient);
 					ok = installResults.length > 0 && installResults.some((r) => r.success);
 				}
 				if (ok) {

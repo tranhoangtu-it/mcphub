@@ -1,17 +1,21 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { RegistryBundle, RegistryIndex, RegistryServer } from "../clients/types.js";
 
-// CJS __dirname is available natively; for ESM tsup injects a shim.
-// We declare it to satisfy TypeScript when moduleResolution is NodeNext.
-declare const __dirname: string;
+// CJS __dirname is available natively in the tsup CJS bundle; fall back to import.meta.url under ESM (Node / tsx).
+declare const __dirname: string | undefined;
+const MODULE_DIR =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url));
 
 // Bundled registry: tsup copies index.json into dist/registry/ via tsup config
-const BUNDLED_INDEX_PATH = path.join(__dirname, "registry", "index.json");
+const BUNDLED_INDEX_PATH = path.join(MODULE_DIR, "registry", "index.json");
 
-// Dev fallback: running from cli/dist/ the registry is 3 levels up
+// Dev fallback: running from cli/src/core/ or cli/dist/ the registry is 3 levels up
 const DEV_INDEX_PATH = path.join(
-  __dirname,
+  MODULE_DIR,
   "..",
   "..",
   "..",
@@ -74,7 +78,7 @@ export function searchServers(query: string): RegistryServer[] {
       s.name.toLowerCase().includes(q) ||
       s.description.toLowerCase().includes(q) ||
       s.category.toLowerCase().includes(q) ||
-      s.tags.some((t) => t.toLowerCase().includes(q))
+      (s.tags?.some((t) => t.toLowerCase().includes(q)) ?? false)
     );
   });
 }

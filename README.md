@@ -12,9 +12,9 @@ One CLI to browse, search, and install curated MCP (Model Context Protocol) serv
 
 Setting up MCP servers means finding the right packages, figuring out config formats for each AI client, and managing environment variables. mcphub keeps a curated registry of verified configs and writes them to the right place for each client, so a server goes from discovery to working in one command.
 
-- **40 curated servers** — Verified configs ready to install in one command
+- **43+ curated servers** — Verified and community-contributed configs ready to install in one command
 - **5 bundles** — Pre-built collections by use case (web-dev, data-science, devops, full-stack, productivity)
-- **5 AI clients** — Claude Desktop, VS Code, Cursor, Windsurf, Claude Code
+- **7 AI clients** — Claude Desktop, VS Code, Cursor, Windsurf, Claude Code, Zed, Gemini CLI
 - **Auto-discovery** — Plus servers auto-discovered weekly by the `discover.yml` workflow
 - **Zero config** — Works instantly with `npx`, no global install needed
 
@@ -80,6 +80,8 @@ The index is built locally with `build-index.ts` (`npm run build:index`). mcphub
 | VS Code | `~/.vscode/mcp.json` | `servers` |
 | Windsurf | `~/.windsurf/mcp.json` | `mcpServers` |
 | Claude Code | `~/.claude/settings.json` | `mcpServers` |
+| Zed | `~/.config/zed/settings.json` | `context_servers` |
+| Gemini CLI | `~/.gemini/settings.json` | `mcpServers` |
 
 ## With mcpman
 
@@ -158,7 +160,7 @@ Want to add an MCP server? See [CONTRIBUTING.md](./CONTRIBUTING.md).
 ```
 mcphub/
 ├── registry/
-│   ├── servers/        # 40 curated server YAML configs
+│   ├── servers/        # 43+ curated server YAML configs
 │   ├── bundles/        # 5 curated bundles
 │   └── discovered/     # auto-discovered servers (generated weekly)
 ├── cli/                # Standalone CLI (npx mcphub)

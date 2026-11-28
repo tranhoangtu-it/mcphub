@@ -7,8 +7,10 @@
   "workspaces": ["cli"],
   "scripts": {
     "validate": "tsx scripts/validate-registry.ts",
+    "test": "tsx --test cli/tests/*.test.ts",
     "build:index": "tsx scripts/build-index.ts",
     "build:cli": "cd cli && npm run build",
+    "typecheck": "cd cli && npm run typecheck",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "check-packages": "tsx scripts/check-packages.ts",
