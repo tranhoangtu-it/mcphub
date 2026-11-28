@@ -35,7 +35,7 @@ export const searchCommand = defineCommand({
         `  ${pc.bold(pc.cyan(s.name))}${verified}  ${pc.dim("[" + s.category + "]")}`
       );
       console.log(`    ${s.description}`);
-      if (s.tags.length > 0) {
+      if (s.tags && s.tags.length > 0) {
         console.log(`    ${pc.dim("tags: " + s.tags.join(", "))}`);
       }
       console.log();

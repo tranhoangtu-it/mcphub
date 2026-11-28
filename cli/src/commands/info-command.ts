@@ -38,7 +38,7 @@ export const infoCommand = defineCommand({
     console.log(`  ${pc.bold("Category:")}  ${server.category}`);
     console.log(`  ${pc.bold("Author:")}    ${server.author}`);
 
-    if (server.tags.length > 0) {
+    if (server.tags && server.tags.length > 0) {
       console.log(`  ${pc.bold("Tags:")}      ${server.tags.join(", ")}`);
     }
 

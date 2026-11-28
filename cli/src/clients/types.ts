@@ -4,7 +4,9 @@ export type ClientType =
   | "cursor"
   | "vscode"
   | "windsurf"
-  | "claude-code";
+  | "claude-code"
+  | "zed"
+  | "gemini-cli";
 
 // MCP server entry stored in client config files
 export interface ServerEntry {
