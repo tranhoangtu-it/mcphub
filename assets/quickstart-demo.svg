@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 240" role="img" aria-label="mcphub Quickstart Terminal Demo">
+  <defs>
+    <linearGradient id="mcpBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="840" height="240" rx="14" fill="url(#mcpBg)" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="0" y="0" width="840" height="38" rx="14" fill="#161b22"/>
+  <rect x="0" y="24" width="840" height="14" fill="#161b22"/>
+  <line x1="0" y1="38" x2="840" y2="38" stroke="#30363d" stroke-width="1"/>
+  <circle cx="24" cy="19" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="5.5" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="5.5" fill="#27c93f"/>
+  <text x="86" y="23" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">mcphub — Zero-Config MCP Registry &amp; Bundle Installer</text>
+
+  <text x="24" y="68" fill="#58a6ff" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">$ npx mcphub search database</text>
+  <text x="24" y="88" fill="#8b949e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12">  postgres (verified)   sqlite (verified)   supabase (verified)   qdrant (verified)</text>
+
+  <text x="24" y="118" fill="#58a6ff" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">$ npx mcphub install filesystem</text>
+  <text x="24" y="138" fill="#3fb950" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12">  [ok] Wrote config -&gt; Claude Desktop, VS Code, Cursor, Windsurf, Claude Code</text>
+
+  <text x="24" y="168" fill="#58a6ff" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">$ npx mcphub bundle install web-developer</text>
+  <text x="24" y="188" fill="#3fb950" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12">  [ok] Installed curated stack (filesystem, fetch, github, playwright, postgres)</text>
+
+  <rect x="24" y="202" width="792" height="24" rx="6" fill="#0b1220" stroke="#1f6feb" stroke-opacity="0.5"/>
+  <text x="36" y="218" fill="#a5d6ff" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11.5">40 curated servers  |  5 ready bundles  |  5 supported AI clients  |  weekly auto-discovery</text>
+</svg>

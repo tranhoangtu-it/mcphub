@@ -4,6 +4,10 @@
 
 One CLI to browse, search, and install curated MCP (Model Context Protocol) servers into every AI client you use.
 
+<p align="center">
+  <img src="assets/quickstart-demo.svg" alt="mcphub Quickstart Terminal Demo" width="820" />
+</p>
+
 ## Why mcphub?
 
 Setting up MCP servers means finding the right packages, figuring out config formats for each AI client, and managing environment variables. mcphub keeps a curated registry of verified configs and writes them to the right place for each client, so a server goes from discovery to working in one command.
